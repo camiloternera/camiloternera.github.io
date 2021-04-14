@@ -3,8 +3,8 @@
   --color-primario: #000;
   --color-secundario: #ff2c2c;
   /* Variable fuente */
-  --fuente-header: 'Antonio', sans-serif;
-  --fuente-page: 'Lato', sans-serif;
+  --fuente-header: "Antonio", sans-serif;
+  --fuente-page: "Lato", sans-serif;
 }
 /* Globales */
 html {
@@ -20,7 +20,6 @@ body {
   font-size: 16px; /* 1rem = 10px */
   font-family: "Heebo", sans-serif;
   /* background-color: black; */
-
 }
 .body-wraper {
   width: calc(
@@ -64,7 +63,7 @@ a {
   /* z-index: 99; */
   padding: 5rem 2rem 2rem 2rem;
   font-family: var(--fuente-header);
-  box-shadow: 0 .1rem 1.5rem rgb(255 255 255 / 45%);
+  box-shadow: 0 0.1rem 1.5rem rgb(255 255 255 / 45%);
 }
 .titulo {
   margin-bottom: 4rem;
@@ -85,7 +84,7 @@ a {
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .navegacion__link:hover {
   color: var(--color-secundario);
@@ -105,8 +104,8 @@ a {
   color: #222222;
   font-size: 2rem;
   cursor: pointer;
-  transition: all .4s ease-in-out;
-  letter-spacing: .8rem;
+  transition: all 0.4s ease-in-out;
+  letter-spacing: 0.8rem;
 }
 .sigueme__redesSociales:hover {
   color: rgb(105, 103, 103);
