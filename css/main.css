@@ -1,0 +1,123 @@
+:root {
+  /* Variables colores */
+  --color-primario: #000;
+  --color-secundario: #ff2c2c;
+  /* Variable fuente */
+  --fuente-header: 'Antonio', sans-serif;
+  --fuente-page: 'Lato', sans-serif;
+}
+/* Globales */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px; /* 1rem = 10px */
+  font-family: "Heebo", sans-serif;
+  /* background-color: black; */
+
+}
+.body-wraper {
+  width: calc(
+    100% - 22rem
+  ); /* Se le define al cuerpo desde donde se trabajará */
+  margin-left: auto;
+  position: relative; /* Posicion relativa para posicionar el header */
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.2rem;
+}
+a {
+  text-decoration: none;
+}
+
+/*========== Header ==========*/
+
+/* Cabecera */
+.cabecera {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primario);
+  /* top y left posicionan el header en la izquierda */
+  position: fixed; /* Deja la posicion fija */
+  top: 0;
+  left: 0;
+  width: 22rem; /* Se le define un ancho */
+  height: 100%;
+  /* z-index: 99; */
+  padding: 5rem 2rem 2rem 2rem;
+  font-family: var(--fuente-header);
+  box-shadow: 0 .1rem 1.5rem rgb(255 255 255 / 45%);
+}
+.titulo {
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+.titulo__pagina {
+  color: #fff;
+  font-family: var(--fuente-page);
+}
+
+/* Navegacion */
+.navegacion {
+  display: flex;
+  flex-direction: column;
+}
+.navegacion__link {
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+.navegacion__link:hover {
+  color: var(--color-secundario);
+}
+.navegacion__link:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Sigueme */
+.sigueme {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 4rem;
+  width: 80%;
+}
+.sigueme__redesSociales {
+  color: #222222;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  letter-spacing: .8rem;
+}
+.sigueme__redesSociales:hover {
+  color: rgb(105, 103, 103);
+}
+span .icon-right {
+  margin-left: 1rem;
+  font-size: 1.8rem;
+}
+/* .sigueme__redesSociales::after {
+  content: '\f101\10f101';
+  color: #fff;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+} */
