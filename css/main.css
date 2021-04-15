@@ -67,7 +67,7 @@ img {
 .subtitulo--cuerpo {
   color: #ff2c2c;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .fw-700 {
   font-weight: 700;
@@ -250,8 +250,6 @@ span .icon-right {
 }
 
 /*========== Perfil ==========*/
-
-/* Perfil */
 .perfil .subtitulo {
   color: var(--color-secundario);
   text-align: center;
@@ -264,11 +262,11 @@ span .icon-right {
   column-gap: 4rem;
   /* height: 10rem; */
 }
-.parrafo {
+.perfil-profesional__parrafo {
   display: flex;
   align-items: center;
 }
-.parrafo .perfil-profesional__texto {
+.perfil-profesional__parrafo .perfil-profesional__parrafo--texto {
   font-size: 2rem;
   line-height: 2;
   text-align: center;
@@ -284,19 +282,30 @@ span .icon-right {
 }
 
 /*========== Experiencias ==========*/
-
 .galeria {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.galeria-experiencias {
-  height: 5rem;
-  width: 5rem;
-  border: 0.2rem solid #000;
+.galeria-experiencia {
+  height: 20rem;
+  width: 100%;
+  border: .2rem solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secundario);
+  transition: all .4s ease-in-out;
+}
+.galeria-experiencia:hover {
+  transform: scale(1.05);
 }
 .muy-pronto {
+  background-color: var(--color-primario);
+  color: #fff;
+  width: 100%;
   text-align: center;
+  padding: 2rem 0;
 }
 
 /*========== Habilidades ==========*/
