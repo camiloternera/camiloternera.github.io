@@ -18,7 +18,7 @@ html {
 }
 body {
   font-size: 16px; /* 1rem = 10px */
-  font-family: "Heebo", sans-serif;
+  font-family: var(--fuente-page);
   /* background-color: black; */
 }
 .body-wraper {
@@ -56,6 +56,10 @@ img {
   margin: 0 auto;
   width: 90%;
 }
+.seccion {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
 .subtitulo {
   color: #fff;
   font-family: var(--fuente-page);
@@ -68,9 +72,9 @@ img {
 .fw-700 {
   font-weight: 700;
 }
-.mt-2rem {
+/* .mt-2rem {
   margin-top: 2rem;
-}
+} */
 
 /*========== Header ==========*/
 
@@ -125,7 +129,7 @@ img {
   margin-bottom: 4rem;
   width: 100%;
 }
-.sigueme__texto { 
+.sigueme__texto {
   color: #222222;
   font-size: 2rem;
   cursor: pointer;
@@ -145,13 +149,13 @@ span .icon-right {
   position: fixed;
   bottom: 0;
   margin: 0 0 1rem 20rem;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   display: none;
 }
 .sigueme:hover .sigueme__redes-sociales {
@@ -200,10 +204,10 @@ span .icon-right {
   background-color: #00e676;
 }
 .sigueme__redes-sociales ul li .linkedin:hover {
-  background-color: #0A66C2;
+  background-color: #0a66c2;
 }
 .sigueme__redes-sociales ul li .github:hover {
-  background-color: #252A2F;
+  background-color: #252a2f;
 }
 /* .sigueme__redesSociales::after {
   content: '\f101\10f101';
@@ -232,28 +236,69 @@ span .icon-right {
 .portada-contenido .subtitulo {
   text-transform: capitalize;
   font-size: 7rem;
+  margin-bottom: 20rem;
+  font-family: var(--fuente-header);
+  letter-spacing: 1rem;
 }
-.portada-contenido .frase {
-
+.portada-contenido .frases {
+  color: #fff;
+  font-size: 2rem;
+  background-color: rgba(2, 2, 2, 0.6);
+  padding: 1rem;
+  width: 90%;
+  text-align: center;
 }
 
 /*========== Perfil ==========*/
 
 /* Perfil */
-
 .perfil .subtitulo {
-  color: #ff2c2c;
+  color: var(--color-secundario);
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
 }
 .perfil-profesional {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 2rem;
+  column-gap: 4rem;
+  /* height: 10rem; */
+}
+.parrafo {
+  display: flex;
+  align-items: center;
+}
+.parrafo .perfil-profesional__texto {
+  font-size: 2rem;
+  line-height: 2;
+  text-align: center;
+}
+.perfil-profesional__imagen {
+  background-image: url(../img/perfil-profesional1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 50rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 4rem 0 #000000;
+  box-shadow: 0 0 4rem 0 #000000;
 }
 
 /*========== Experiencias ==========*/
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.galeria-experiencias {
+  height: 5rem;
+  width: 5rem;
+  border: 0.2rem solid #000;
+}
+.muy-pronto {
+  text-align: center;
+}
+
 /*========== Habilidades ==========*/
 /*========== Contactos ==========*/
 /*========== Footer ==========*/
-
