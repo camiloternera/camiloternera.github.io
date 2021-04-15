@@ -10,6 +10,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -130,14 +131,14 @@ img {
   width: 100%;
 }
 .sigueme__texto {
-  color: #222222;
+  color: #666666;
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   letter-spacing: 0.8rem;
 }
 .sigueme__texto:hover {
-  color: rgb(105, 103, 103);
+  color: rgb(138, 136, 136);
 }
 span .icon-right {
   margin-left: 1rem;
@@ -156,10 +157,9 @@ span .icon-right {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease-in-out;
-  display: none;
+  /* display: none; */
 }
 .sigueme:hover .sigueme__redes-sociales {
-  display: inline-flex;
 }
 .sigueme__redes-sociales ul {
   margin: 0;
@@ -311,3 +311,12 @@ span .icon-right {
 /*========== Habilidades ==========*/
 /*========== Contactos ==========*/
 /*========== Footer ==========*/
+.pie-pagina {
+  background-color: var(--color-primario);
+}
+.copyright {
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 2rem;
+}
