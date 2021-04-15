@@ -50,6 +50,28 @@ img {
   max-width: 100%;
 }
 
+/* Utilidades */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 90%;
+}
+.subtitulo {
+  color: #fff;
+  font-family: var(--fuente-page);
+}
+.subtitulo--cuerpo {
+  color: #ff2c2c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.mt-2rem {
+  margin-top: 2rem;
+}
+
 /*========== Header ==========*/
 
 /* Cabecera */
@@ -127,4 +149,45 @@ span .icon-right {
 /*========== Index ==========*/
 
 /* Portada */
+.portada {
+  background-image: url(../img/fondo-portada1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 60rem;
+}
+.portada-contenido {
+  height: 100%;
+  display: flex;
+  padding: 10rem 0 0 10rem;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.portada-contenido .subtitulo {
+  text-transform: capitalize;
+  font-size: 7rem;
+}
+.portada-contenido .frase {
+
+}
+
+/*========== Perfil ==========*/
+
+/* Perfil */
+
+.perfil .subtitulo {
+  color: #ff2c2c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.perfil-profesional {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+
+/*========== Experiencias ==========*/
+/*========== Habilidades ==========*/
+/*========== Contactos ==========*/
+/*========== Footer ==========*/
 
