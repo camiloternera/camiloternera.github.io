@@ -157,10 +157,24 @@ span .icon-right {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease-in-out;
-  /* display: none; */
+  display: none;
+  /* animation CSS */
+  animation-name: aparecer;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
 }
 .sigueme:hover .sigueme__redes-sociales {
+  display: flex;
 }
+@keyframes aparecer{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* End animation CSS */
 .sigueme__redes-sociales ul {
   margin: 0;
   padding: 0;
@@ -217,7 +231,6 @@ span .icon-right {
 } */
 
 /*========== Index ==========*/
-
 /* Portada */
 .portada {
   background-image: url(../img/fondo-portada1.jpg);
@@ -287,7 +300,7 @@ span .icon-right {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.galeria-experiencia {
+.galeria__experiencia {
   height: 20rem;
   width: 100%;
   border: .2rem solid #000;
@@ -297,7 +310,7 @@ span .icon-right {
   background-color: var(--color-secundario);
   transition: all .4s ease-in-out;
 }
-.galeria-experiencia:hover {
+.galeria__experiencia:hover {
   transform: scale(1.05);
 }
 .muy-pronto {
