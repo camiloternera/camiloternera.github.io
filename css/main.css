@@ -28,7 +28,7 @@ body {
   ); /* Se le define al cuerpo desde donde se trabajará */
   margin-left: auto;
   position: relative; /* Posicion relativa para posicionar el header */
-  z-index: 99;
+  z-index: 1;
 }
 h1,
 h2,
@@ -332,6 +332,16 @@ span .icon-right {
 }
 
 /*========== Habilidades ==========*/
+.galeria__habilidad {
+  /* height: 10rem; */
+  width: 100%;
+}
+.galeria__habilidad img {
+  background-size: cover;
+  background-position: center;
+  back
+}
+
 /*========== Contactos ==========*/
 /*========== Footer ==========*/
 .pie-pagina {
