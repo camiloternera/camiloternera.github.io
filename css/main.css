@@ -167,7 +167,7 @@ span .icon-right {
 .sigueme:hover .sigueme__redes-sociales {
   display: flex;
 }
-@keyframes aparecer{
+@keyframes aparecer {
   from {
     opacity: 0;
   }
@@ -234,7 +234,7 @@ span .icon-right {
 /*========== Index ==========*/
 /* Portada */
 .portada {
-  background-image: url(../img/fondo-portada1.jpg);
+  background-image: url(../img/fondo-portada.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -295,7 +295,7 @@ span .icon-right {
   text-align: center;
 }
 .perfil-profesional__imagen {
-  background-image: url(../img/perfil-profesional1.jpg);
+  background-image: url(../img/perfil-profesional.jpg);
   background-size: cover;
   background-position: center;
   height: 50rem;
@@ -313,12 +313,12 @@ span .icon-right {
 .galeria__experiencia {
   height: 20rem;
   width: 100%;
-  border: .2rem solid #000;
+  border: 0.2rem solid #000;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--color-secundario);
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .galeria__experiencia:hover {
   transform: scale(1.05);
@@ -333,15 +333,38 @@ span .icon-right {
 
 /*========== Habilidades ==========*/
 .galeria__habilidad {
-  /* height: 10rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
-.galeria__habilidad img {
-  background-size: cover;
-  background-position: center;
-  back
+.galeria__habilidad .icons {
+  font-size: 20rem;
 }
-
+.galeria__habilidad--html {
+  color: #f4470b;
+}
+.galeria__habilidad--css {
+  color: #016cb4;
+}
+.galeria__habilidad--js {
+  color: #e8d44d;
+}
+.galeria__habilidad--git {
+  color: #e84e31;
+}
+.galeria__habilidad--php {
+  color: #7377ad;
+}
+.galeria__habilidad--java {
+  color: #e51f24;
+}
+.galeria__habilidad i {
+  transition: all 0.4s ease-in-out;
+}
+.galeria__habilidad i:hover {
+  transform: scale(1.05);
+}
 /*========== Contactos ==========*/
 /*========== Footer ==========*/
 .pie-pagina {
