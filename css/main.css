@@ -1,6 +1,6 @@
 :root {
   /* Variables colores */
-  --color-primario: #000;
+  --color-primario: #111111;
   --color-secundario: #ff2c2c;
   /* Variable fuente */
   --fuente-header: "Antonio", sans-serif;
@@ -22,13 +22,20 @@ body {
   font-family: var(--fuente-page);
   /* background-color: black; */
 }
-.body-wraper {
-  width: calc(
-    100% - 22rem
-  ); /* Se le define al cuerpo desde donde se trabajará */
-  margin-left: auto;
-  position: relative; /* Posicion relativa para posicionar el header */
-  z-index: 1;
+/* Scrollbar */
+.scrollbar::-webkit-scrollbar {
+  width: .8rem; 
+}
+.scrollbar::-moz-scrollbar {
+  width: .8rem; 
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ce2d2d;
+  border-radius: .5rem;
+}
+.scrollbar::-moz-scrollbar-thumb {
+  background-color: #ce2d2d;
+  border-radius: .5rem;
 }
 h1,
 h2,
@@ -78,6 +85,21 @@ img {
   margin-top: 2rem;
 } */
 
+
+/* Body Wraper */
+.body-wraper {
+  width: calc(
+    100% - 22rem
+  ); /* Se le define al cuerpo desde donde se trabajará */
+  margin-left: auto;
+  position: relative; /* Posicion relativa para posicionar el header */
+  z-index: 1;
+}
+@media only screen and (max-width: 992px) {
+  .body-wraper {
+    width: 100%;
+  }
+}
 /*========== Header ==========*/
 
 /* Cabecera */
@@ -224,12 +246,39 @@ span .icon-right {
 .sigueme__redes-sociales ul li .github:hover {
   background-color: #252a2f;
 }
-/* .sigueme__redesSociales::after {
-  content: '\f101\10f101';
-  color: #fff;
-  font-size: 1.6rem;
-  margin-left: 1rem;
-} */
+@media only screen and (max-width: 992px) {
+  .cabecera {
+    display: none;
+  }
+}
+
+/*========== Menu Responsive ==========*/
+/* Cabecera Responsive */
+.cabecera-responsive {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  .cabecera-responsive {
+    display: flex;
+    background-color: var(--color-primario);
+  }
+  .menu-movil {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    position: absolute;
+  }
+  .menu-movil span {
+    display: block;
+    background-color: #f3f3f3;
+    height: .5rem;
+    width: 3rem;
+    margin: 1rem auto;
+    border-radius: 5rem;
+  }
+}
 
 /*========== Index ==========*/
 /* Portada */
@@ -297,7 +346,7 @@ span .icon-right {
 .perfil-profesional__imagen {
   background-image: url(../img/perfil-profesional.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: right;
   height: 50rem;
   border-radius: 1rem;
   -webkit-box-shadow: 0 0 4rem 0 #000000;
