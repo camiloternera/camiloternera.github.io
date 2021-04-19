@@ -2,10 +2,10 @@
 // (function () {
 //   "use strict";
 //   addEventListener("DOMContentLoaded", () => {
-//     
-    
+//       
 //   });
 // })();
+
 /* Utilizando libreria TYPED.JS
   https://github.com/mattboldt/typed.js/
 */
@@ -148,3 +148,15 @@ particlesJS(
     "retina_detect": true
   }
 );
+
+// Menu Responsive
+const menuMovil = document.querySelector('.menu-movil');
+const enlaces = document.querySelector('.navegacion');
+const barra = document.querySelectorAll('.menu-movil span');
+
+menuMovil.addEventListener('click', () => {
+  enlaces.classList.toggle('activado');
+  barra.forEach (child => {child.classList.toggle('animado')});
+});
+
+
