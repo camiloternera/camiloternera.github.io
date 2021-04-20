@@ -6,6 +6,7 @@
   --fuente-header: "Antonio", sans-serif;
   --fuente-page: "Lato", sans-serif;
 }
+
 /* Globales */
 html {
   font-size: 62.5%;
@@ -22,6 +23,7 @@ body {
   font-family: var(--fuente-page);
   /* background-color: black; */
 }
+
 /* Scrollbar */
 .scrollbar::-webkit-scrollbar {
   width: .8rem; 
@@ -106,7 +108,8 @@ img {
 @media only screen and (max-width: 992px) {
   .body-wraper {
     width: 100%;
-    height: calc(100% - 7.5rem);
+    /* height: calc(100% - 7.4rem); */
+    /* position: inherit; */
   }
 }
 
@@ -267,14 +270,15 @@ span .icon-right {
     padding: 0;
     box-shadow: none;
     background-color: transparent;
-    position: fixed;
-    height: 7.5rem;
+    position: sticky;
+    top: 0rem;
+    height: 7.4rem;
   }
 
   /* Titulo */
   .titulo {
     padding: 1rem 0;
-    text-align: center;
+    padding-left: 8.5rem;
     background-color: var(--color-primario);
     margin: 0;
   }
@@ -349,7 +353,7 @@ span .icon-right {
   .navegacion.activado {
     display: flex;
     position: fixed;
-    top: 7.5rem;
+    top: 7.4rem;
     animation: aparecerMenuLateral 500ms ease-in;
   }
 
@@ -358,13 +362,33 @@ span .icon-right {
     display: none;
   }
 }
-@media only screen and (max-width: 992px) {
-  .cabecera-responsive {
-    display: flex;
-    background-color: var(--color-primario);
+/* Navegacion Moviles */
+@media only screen and (max-width: 576px) {
+  .cabecera {
+    height: 4.6rem;
   }
-  
+  .menu-movil {
+    left: 2rem;
+  }
+  .navegacion.activado {
+    top: 4.6rem;
+  }
+  .titulo {
+    padding-left: 7rem;
+  }
+  .titulo__pagina {
+    font-size: 4rem;
+  }
+  .navegacion {
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+  }
+  .navegacion__link {
+    text-align: center;
+  }
 }
+
 
 /*========== Index ==========*/
 /* Portada */
@@ -395,8 +419,39 @@ span .icon-right {
   background-color: rgba(2, 2, 2, 0.6);
   padding: 3rem;
   width: 90%;
+  margin: 0 auto;
   text-align: center;
   border-radius: 1rem;
+}
+
+/* Index Responsive */
+@media only screen and (max-width: 992px) {
+  /* Portada */
+  .portada {
+    width: 100%;
+    height: calc(100% - 7.4rem);
+  }
+  .portada-contenido {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .portada-contenido .subtitulo {
+    text-align: center;
+    margin-top: 8rem;
+    letter-spacing: normal;
+  }
+  .portada-contenido .frases {
+    justify-content: center;
+  }
+}
+
+/* Index Movil */
+@media only screen and (max-width: 576px) {
+  .portada-contenido .subtitulo {
+    overflow: scroll;
+    font-size: 4.5rem;
+  }
 }
 
 /*========== Perfil ==========*/
@@ -420,15 +475,38 @@ span .icon-right {
   font-size: 2rem;
   line-height: 2;
   text-align: center;
+  margin-right: 4rem;
+  justify-content: center;
+  font-weight: 700;
 }
 .perfil-profesional__imagen {
+  width: 100%;
   background-image: url(../img/perfil-profesional.jpg);
   background-size: cover;
   background-position: right;
-  height: 50rem;
+  height: auto;
   border-radius: 1rem;
   -webkit-box-shadow: 0 0 4rem 0 #000000;
   box-shadow: 0 0 4rem 0 #000000;
+}
+
+/* Perfil Responsive */
+@media only screen and (max-width: 992px) {
+  /* Perfil */
+  .perfil-profesional {
+    grid-template-columns: auto;
+  }
+  .perfil-profesional__parrafo {
+    margin-bottom: 4rem;
+  }
+  .perfil-profesional__parrafo .perfil-profesional__parrafo--texto {
+    margin-right: 0;
+  }
+  .perfil-profesional__imagen {
+    height: 60rem;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /*========== Experiencias ==========*/
@@ -456,6 +534,22 @@ span .icon-right {
   width: 100%;
   text-align: center;
   padding: 2rem 0;
+}
+
+/* Experiencias Responsive */
+@media only screen and (max-width: 992px) {
+  /* Experiencias */
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Experiencias Movil */
+@media only screen and (max-width: 576px) {
+  /* Experiencias */
+  .galeria {
+    grid-template-columns: auto;
+  }
 }
 
 /*========== Habilidades ==========*/
