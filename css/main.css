@@ -83,9 +83,6 @@ img {
 .fw-700 {
   font-weight: 700;
 }
-/* .mt-2rem {
-  margin-top: 2rem;
-} */
 
 /*========== Particulas ==========*/
 #particles-js {
@@ -209,12 +206,8 @@ span .icon-right {
   display: flex;
 }
 @keyframes aparecer {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 /* End animation CSS */
 .sigueme__redes-sociales ul {
@@ -434,6 +427,7 @@ span .icon-right {
   margin: 0 auto;
   text-align: center;
   border-radius: 1rem;
+  font-family: var(--fuente-page);
 }
 
 /* Index Responsive */
@@ -482,13 +476,20 @@ span .icon-right {
 .perfil-profesional__parrafo {
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* margin-right: 4rem; */
+  background-color: rgba(0, 0, 0, .8);
+  border-radius: 3rem;
+  -webkit-box-shadow: 0 0 4rem 0 #000000;
+  box-shadow: 0 0 4rem 0 #000000;
 }
-.perfil-profesional__parrafo .perfil-profesional__parrafo--texto {
+
+.perfil-profesional__parrafo--texto {
   font-size: 2rem;
   line-height: 2;
+  padding: 2rem;
+  color: #fff;
   text-align: center;
-  margin-right: 4rem;
-  justify-content: center;
   font-weight: 700;
 }
 .perfil-profesional__imagen {
@@ -608,4 +609,23 @@ span .icon-right {
   text-align: center;
   padding: 3rem 0;
   font-size: 2rem;
+}
+
+/* Redes sociales Responsive */
+@media only screen and (max-width: 992px) {
+  .sigueme__redes-sociales {
+    margin: 0;
+    background-color: inherit;
+  }
+  .sigueme__redes-sociales--footer {
+    display: flex;
+    position: static;
+    width: 100%;  
+  }
+  .sigueme__redes-sociales--footer ul li a {
+    border-radius: 5rem;
+  }
+  .copyright {
+    padding-top: 0;
+  }
 }
